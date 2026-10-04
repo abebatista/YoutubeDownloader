@@ -37,6 +37,32 @@ By using this project or its source code, for any purpose and in any shape or fo
 
 To learn more about the war and how you can help, [click here](https://tyrrrz.me/ukraine). Glory to Ukraine! 🇺🇦
 
+## Run this checkout locally
+
+From the project root on macOS or Linux:
+
+```bash
+./run.sh
+```
+
+On macOS, you can also double-click `run.command` in Finder. The launcher builds
+the current source before opening the app. The startup support message and
+development-build warning are disabled in this checkout.
+
+The SDK, NuGet packages, build output, and settings all live in the ignored
+`.local/` directory inside this project. The launcher installs the SDK specified
+by `global.json` if it is missing; the first setup requires internet access and
+`curl`. Subsequent launches reuse the local SDK and packages. Automatic upstream
+updates are disabled when using this launcher to preserve the local changes.
+
+FFmpeg is detected from your installed tools. If it is not found, set its path in
+the app's settings or accept the app's download prompt. On a Homebrew-based Mac,
+the path is commonly `/opt/homebrew/bin/ffmpeg`.
+
+To build without opening the app, run `./run.sh --build-only`. Downloaded videos
+are saved to the destination you choose in the app. Keep `.local/Settings.dat`
+when rebuilding to preserve preferences and any saved authentication.
+
 ## Download
 
 - 🟢 **[Stable release](https://github.com/Tyrrrz/YoutubeDownloader/releases/latest)**

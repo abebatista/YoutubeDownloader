@@ -3,6 +3,10 @@
 .idea/
 *.suo
 *.user
+.DS_Store
+
+# Project-local SDK, packages, builds, and private settings
+/.local/
 
 # Build results
 bin/
